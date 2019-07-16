@@ -5,3 +5,9 @@ describe('writing some tests', () => {
         expect(answer).toBe(25); // another
     });
 });
+
+describe('using the snippets', () => {
+    it('name of the group', () => {
+
+    });
+});
