@@ -4,7 +4,7 @@ export function isEven(n: number): boolean {
 
 export const PI = 3.1415;
 
-export function _logIt(x; string) {
+export function _logIt(x: string) {
     // do something
 }
 
@@ -15,4 +15,5 @@ export function formatName(first: string, last: string, mi?: string): string {
     }
     return fullName;
 }
+
 

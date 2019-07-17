@@ -1,4 +1,4 @@
-describe('data types', () => {
+/*describe('data types', () => {
     describe('using variables', () => {
         it('using let', () => {
             let x: any;
@@ -104,5 +104,4 @@ describe('literals in typescript', () => {
 
         const [, lastName, howOld] = warren;
         expect(lastName.toUpperCase()).toBe('ELLIS');
-        expect(howOld).toBe(51);
-    });
+    })*/

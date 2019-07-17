@@ -170,59 +170,59 @@ describe('functions and objects', () => {
             logIt(email);
         });
 
-        it('using interfaces for the shape of an object', () => {
-            interface Person { first: string; last: string; getInfo: () => string };
-
-            //interface Person {first: string; last: string; mi?:string};
-            interface PersonWithMiddleInitial extends Person {
-                mi: string;
-            }
-
-            const cf: PersonWithMiddleInitial = {
-                first: 'Carrie',
-                last: 'Fisher',
-                mi: 'A'
-            }
-
-            const mh: Person = {
-                first: 'Mark',
-                last: 'Hamill'
-            }
-
-            class Actor {
-                private mAge: number = 0;
-
-                constructor(public firstName: string, public lastName: string) { }
-
-                getInfo() {
-                    return `${this.lastName}, ${this.firstName}`;
-                }
-
-                get age(): number {
-                    return this.mAge;
-                }
-
-                set age(newValue: number) {
-                    this.mAge = newValue;
-                }
-            }
-
-            const ralph = new Actor('Ralph', 'Maccio');
-
-            expect(ralph.firstName).toBe('Ralph');
-            expect(ralph.lastName).toBe('Maccio');
-            expect(ralph.getInfo()).toBe('Maccio, Ralph');
-            ralph.age = 39;
-            expect(ralph.age).toBe(39);
-
-            class Employee extends Actor {
-                constructor(first: string, last: string, public salary: number) {
-                    super(first, last);
-                }
-            }
-
-            let peter = new Employee('Peter', 'Lewis', 50_000_000);
-            expect(peter.salary).toBe(50_000_000);
-        });
+        /*it('using interfaces for the shape of an object', () => {
+             interface Person { first: string; last: string; getInfo: () => string };
+ 
+             //interface Person {first: string; last: string; mi?:string};
+             interface PersonWithMiddleInitial extends Person {
+                 mi: string;
+             }
+ 
+             const cf: PersonWithMiddleInitial = {
+                 first: 'Carrie',
+                 last: 'Fisher',
+                 mi: 'A'
+             }
+ 
+             const mh: Person = {
+                 first: 'Mark',
+                 last: 'Hamill'
+             }
+ 
+             class Actor {
+                 private mAge: number = 0;
+ 
+                 constructor(public firstName: string, public lastName: string) { }
+ 
+                 getInfo() {
+                      return `${this.lastName}, ${this.firstName}`;
+                  }
+ 
+                 get age(): number {
+                     return this.mAge;
+                 }
+ 
+                 set age(newValue: number) {
+                     this.mAge = newValue;
+                 }
+             }
+ 
+             const ralph = new Actor('Ralph', 'Maccio');
+ 
+             expect(ralph.firstName).toBe('Ralph');
+             expect(ralph.lastName).toBe('Maccio');
+             //expect(ralph.getInfo()).toBe('Maccio, Ralph');
+             ralph.age = 39;
+             expect(ralph.age).toBe(39);
+ 
+             class Employee extends Actor {
+                 constructor(first: string, last: string, public salary: number) {
+                     super(first, last);
+                 }
+             }
+ 
+             let peter = new Employee('Peter', 'Lewis', 50_000_000);
+             expect(peter.salary).toBe(50_000_000);
+         }); */
     });
 });
